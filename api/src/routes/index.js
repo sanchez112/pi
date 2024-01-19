@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const { getTemperaments } = require('../controllers/TempController');
+const {getDogs,getDogDetail,postDog,removeDogs} = require('../controllers/breedController.js')
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -7,12 +8,22 @@ const { getTemperaments } = require('../controllers/TempController');
 
 const router = Router();
 
+//GET/dogs and GET/dogs?name=''
+router.get('/dogs', getDogs)//x
 
-//GET/temperaments
-router.get('/temperaments', getTemperaments )
+// //GET/dogs/{idRaza}
+router.get('/dogs/:idBreed', getDogDetail )//x
 
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
+// //POST/dogs
+router.post('/dogs', postDog)//x
+
+// //GET/temperaments
+router.get('/temperaments', getTemperaments )//x
+
+// //DELETE
+router.delete('/dogs/:idBreed', removeDogs)//x
+
+
 
 
 module.exports = router;

@@ -5,31 +5,27 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Breed', {
     id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      allowNull:false,
+      primaryKey: true,
+    },
+    
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    height: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    weight: {
       type: DataTypes.INTEGER,
-      autoIncrement: true,
-      allowNull: false,
-      primaryKey: true
+      allowNull:false,
     },
-    imagen: {
+    life_span: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    nombre: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    Altura: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    peso: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    añosDeVida: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    }
 
   },{ timestamps: false });
 };
