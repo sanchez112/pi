@@ -13,9 +13,9 @@ function App() {
     
         <Route path="/"><NavBar/></Route>
         <Route exact path="/"><LandingPage /></Route>
-        {/* <Route exact path="/home"><Home /></Route> */}
-        {/* <Route exact path="/dog/:id" component={DetailPage} /> */}
-        {/* <Route exact path="/dogs/create" component={CreatePage} /> */}
+        <Route exact path="/home"><Home /></Route> 
+        <Route exact path="/dog/:id" component={DetailPage} /> 
+        <Route exact path="/dogs/create" component={CreatePage} />
     
     </div>  
   );
